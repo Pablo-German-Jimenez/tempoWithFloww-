@@ -1,0 +1,216 @@
+body {
+  min-height: 100vh;
+  background: url("./grafitiEstiloHiphop.png");
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.centrar-pantalla {
+  min-height: 50vh;
+  min-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.temporador-circulo-animado {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Elimina padding/margin extra si hay */
+}
+.circulo-animado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 0 24px #ffe066) drop-shadow(0 0 40px #ffd700);
+  z-index: 1;
+}
+
+.animar-circulo {
+  stroke-dasharray: 754;
+  stroke-dashoffset: 0;
+  filter: brightness(2.2) blur(1px);
+  animation: girar-circulo 4s linear infinite, azul-amarillo-cambio 6s linear infinite;
+  stroke: url(#gradiente);
+   stroke-linecap: round;
+}
+
+@keyframes girar-circulo {
+  0% {
+    stroke-dashoffset: 0;
+    filter: brightness(2.2) blur(1px);
+  }
+  100% {
+    stroke-dashoffset: -754;
+    filter: brightness(2.5) blur(2px);
+  }
+}
+
+@keyframes dorado-cambio {
+  0% {
+    filter: drop-shadow(0 0 24px #ffe066) drop-shadow(0 0 40px #ffd700);
+  }
+  50% {
+    filter: drop-shadow(0 0 32px #ffd700) drop-shadow(0 0 48px #ffe066);
+  }
+  100% {
+    filter: drop-shadow(0 0 24px #ffe066) drop-shadow(0 0 40px #ffd700);
+  }
+}
+
+.contenido-temporador {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 210px;      /* Ajusta este valor para que todo quede dentro del círculo */
+  height: 210px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  /* Opcional: para evitar que nada sobresalga */
+  overflow: hidden;
+}
+
+.numeros-temporizador {
+ display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;}
+
+#temporador span {
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #00aaff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #ffe066, 0 0 4px #00aaff, 0 0 16px #ffe066;
+}
+.mas, .menos, .boton-cuadrado {
+  /* Si los botones sobresalen, reduce su tamaño */
+  max-width: 48px;
+  max-height: 48px;
+  font-size: 1.2em;
+}
+
+
+.mas:hover, .menos:hover {
+  background: #ffe066;
+  color: #23233a;
+}
+
+.botones-acciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.boton-cuadrado {
+  width: 60px;
+  height: 60px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 10px;
+  background: #23233a;
+  color: #00aaff;
+  box-shadow: 0 2px 8px #181828;
+  border: none;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.icono {
+  font-size: 2.2em;
+  margin: 0;
+  line-height: 1;
+  display: block;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+}
+.puntos-pelotita {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #e0e0e0 60%, #888 100%);
+  box-shadow: 0 0 8px 2px #bbb8, 0 0 0 2px #fff2;
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+/* PLAY: azul animado */
+.boton-play {
+  background: linear-gradient(135deg, #0e3c5e 0%, #00aaff 100%);
+  color: #00aaff;
+  animation: play-azul-anim 5s infinite alternate;
+}
+@keyframes play-azul-anim {
+  0% { background: linear-gradient(135deg, #0e3c5e 0%, #00aaff 100%); color: #00aaff; }
+  50% { background: linear-gradient(135deg, #00aaff 0%, #0e3c5e 100%); color: #ffe066; }
+  100% { background: linear-gradient(135deg, #0e3c5e 0%, #00aaff 100%); color: #00aaff; }
+}
+
+/* PAUSA: amarillo animado */
+.boton-pausa {
+  background: linear-gradient(135deg, #bfa900 0%, #ffe066 100%);
+  color: #ffe066;
+  animation: pausa-amarillo-anim 5s infinite alternate;
+}
+@keyframes pausa-amarillo-anim {
+  0% { background: linear-gradient(135deg, #bfa900 0%, #ffe066 100%); color: #ffe066; }
+  50% { background: linear-gradient(135deg, #ffe066 0%, #bfa900 100%); color: #00aaff; }
+  100% { background: linear-gradient(135deg, #bfa900 0%, #ffe066 100%); color: #ffe066; }
+}
+
+/* REINICIAR: igual que play */
+.boton-reiniciar {
+  background: linear-gradient(135deg, #0e3c5e 0%, #00aaff 100%);
+  color: #00aaff;
+  animation: play-azul-anim 5s infinite alternate;
+}
+
+/* Hover: más brillo */
+.boton-cuadrado:hover {
+  box-shadow: 0 4px 16px #ffe066;
+  filter: brightness(1.2);
+}
+
+@media (max-width: 500px) {
+  .temporador-circulo-animado {
+    width: 180px;
+    height: 180px;
+  }
+  .circulo-animado {
+    width: 180px;
+    height: 180px;
+  }
+  .boton-cuadrado {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3em;
+  }
+  .icono {
+    font-size: 1.5em;
+  }
+}
