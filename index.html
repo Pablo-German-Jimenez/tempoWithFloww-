@@ -10,67 +10,76 @@
 </head>
 
 <body>
-   <main>
-     <div class="video-youtube text-center display-3">
-        <iframe width="600" height="325" src="https://www.youtube.com/embed/bd9HJgEyc5Q"
-            title="bboy Cico Powermoves legend of world record 1990 spin 27" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-    </div>
-    <div class="centrar-pantalla d-flex align-items-center  " >
-        <div class="temporador-circulo-animado ">
-            <svg class="circulo-animado" class="mt" width="280" height="280" >
-                <defs>
-                    <linearGradient id="gradiente" x1="5%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#ffe066"/>
-                        <stop offset="100%" stop-color="#ffd700"/>
-                    </linearGradient>
-                </defs>
-                <circle cx="140" cy="140" r="120" stroke="url(#gradiente)" stroke-width="16" fill="none"
-                    class="animar-circulo" stroke-linecap="round" />
-            </svg>
-            <div id="temporador" class="contenido-temporador ">
-                <div class="numeros-temporizador">
-                    <span id="hora">00</span>
-                    <span class="puntos-pelotita"></span>
-                    <span id="minuto">00</span>
-                    <span class="puntos-pelotita"></span>
-                    <span id="segundo">00</span>
-                </div>
-                <div>
-                    <button class="mas" data-tipo="hora">+</button>
-                    <button class="menos" data-tipo="hora">-</button>
-                    <button class="mas" data-tipo="minuto">+</button>
-                    <button class="menos" data-tipo="minuto">-</button>
-                    <button class="mas" data-tipo="segundo">+</button>
-                    <button class="menos" data-tipo="segundo">-</button>
-                </div>
-                <div class="botones-acciones">
-                    <button id="empezar" class="boton-cuadrado boton-play" title="Empezar">
-                        <span class="icono fs-3">&#9654;</span>
-                    </button>
-                    <button id="pausar" class="boton-cuadrado boton-pausa" title="Pausar">
-                        <span class="icono fs-3">&#9632;</span>
-                    </button>
-                    <button id="nuevo" class="boton-cuadrado boton-reiniciar" title="Reiniciar">
-                        <span class="icono fs-3">&#8635;</span>
-                    </button>
+    <main>
+        <div class="video-youtube text-center display-3">
+            <iframe width="600" height="325" src="https://www.youtube.com/embed/bd9HJgEyc5Q"
+                title="bboy Cico Powermoves legend of world record 1990 spin 27" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="centrar-pantalla d-flex align-items-center  ">
+            <div class="temporador-circulo-animado ">
+                <svg class="circulo-animado" class="mt" width="280" height="280">
+                    <defs>
+                        <linearGradient id="gradiente" x1="5%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ffe066" />
+                            <stop offset="100%" stop-color="#ffd700" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="140" cy="140" r="120" stroke="url(#gradiente)" stroke-width="16" fill="none"
+                        class="animar-circulo" stroke-linecap="round" />
+                </svg>
+                <div id="temporador" class="contenido-temporador ">
+                    <div class="numeros-temporizador">
+                        <span id="hora">00</span>
+                        <span class="puntos-pelotita"></span>
+                        <span id="minuto">00</span>
+                        <span class="puntos-pelotita"></span>
+                        <span id="segundo">00</span>
+                    </div>
+                    <div>
+                        <button class="mas" data-tipo="hora">+</button>
+                        <button class="menos" data-tipo="hora">-</button>
+                        <button class="mas" data-tipo="minuto">+</button>
+                        <button class="menos" data-tipo="minuto">-</button>
+                        <button class="mas" data-tipo="segundo">+</button>
+                        <button class="menos" data-tipo="segundo">-</button>
+                    </div>
+                    <div class="botones-acciones">
+                        <button id="empezar" class="boton-cuadrado boton-play" title="Empezar">
+                            <span class="icono fs-3">&#9654;</span>
+                        </button>
+                        <button id="pausar" class="boton-cuadrado boton-pausa" title="Pausar">
+                            <span class="icono fs-3">&#9632;</span>
+                        </button>
+                        <button id="nuevo" class="boton-cuadrado boton-reiniciar" title="Reiniciar">
+                            <span class="icono fs-3">&#8635;</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-   </main>   
-<footer class="footer-animado text-center p-3 text-warning">
-  &copy; All right reserved by dev.BboyLinkin♪
-  <span class="destello"></span>
-  <span class="destello"></span>
-  <span class="destello"></span>
-</footer>
-    <script src="./js/logicaTempo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+    </main>
+            <footer class="footer-animado d-flex justify-content-center align-items-center w-100 h-100" >
+                &copy; All right reserved by dev.<svg xmlns="http://www.w3.org/2000/svg" width="16" height="46"
+                    fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+                    <path
+                        d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927z" />
+                </svg>.<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+                    <path
+                        d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927z" />
+                </svg>oyLinkin♪
+                <span class="destello"></span>
+                <span class="destello"></span>
+                <span class="destello"></span>
+            </footer>
+        </div>
+        <script src="./js/logicaTempo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
 </body>
 
 
