@@ -1,8 +1,7 @@
 body {
   min-height: 100vh;
   background: url("./grafitiEstiloHiphop.png");
-  margin: 0;
-  padding: 10px;
+  margin-top: 10px;
   font-family: Arial, sans-serif;
   display: flex ;
   flex-direction: column  ;
@@ -15,8 +14,9 @@ flex-grow: 1;}
 .footer-animado {
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: #ffae00;
   font-weight: bold;
+  
   background: linear-gradient(270deg, #0074d9, #e5e4e2, #0074d9, #e5e4e2);
   background-size: 400% 400%;
   animation: gradienteAnimado 8s ease-in-out infinite;
@@ -38,7 +38,7 @@ flex-grow: 1;}
   left: -60px;
   width: 60px;
   height: 8px;
-  background: linear-gradient(90deg, transparent, #fff 60%, transparent);
+  background: linear-gradient(90deg, transparent, #cf0abf 60%, transparent);
   opacity: 0.7;
   border-radius: 8px;
   filter: blur(2px);
